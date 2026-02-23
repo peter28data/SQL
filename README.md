@@ -4,7 +4,7 @@
 
 ----
 
-# 📊 End-to-End SQL Analytics Project
+# 📌 End-to-End SQL Analytics Project
 ## Database Management Portfolio 
 
 ## Executive Summary
@@ -17,9 +17,8 @@ The Goal: Transform inconsistent records into reliable, query-ready tables that 
 2. Split Strings to remove 'St, Ave, Ln'
 3. Aggregated by Noise-Type Categories
 
----
 
-## 🧪 Business Problem 
+## Business Problem 
 
 Open-source data from real Washington D.C. 311 Service-Request calls is often collected from multiple sources and contains inconsistent formatting, duplicate values, and non-standard category labels. 
 
