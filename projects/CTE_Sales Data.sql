@@ -1,8 +1,6 @@
 ---------------------------------------------------------------------------------------------
 
--- First SQL cell
--- top_five_products_each_category
--- Sorted by category in ascending order
+-- Top 5 Products by Category in Ascending order
 
 SELECT * FROM (
 SELECT products.category, 
@@ -18,13 +16,8 @@ SELECT products.category,
 ) AS tmp
 WHERE product_rank < 6;
 
--- Explanation: By casting the sales column as numeric
-
 
 ---------------------------------------------------------------------------------------------
-
--- Second SQL cell
--- impute_missing_values
 
 -- Calculate the Quantity for orders with Missing values
 -- By determining the unit price
