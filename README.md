@@ -88,14 +88,14 @@ The second graph are the changes produced by prompt engineering at a senior anal
 
 ---
 
-## 🎯 Recap: SQL Queries to Clean Data
+## Recap: SQL Queries to Clean Data
 1. Trimmed Data to remove numbers from street names
 2. Split Strings to remove 'St, Ave, Ln'
 3. Aggregated by Noise-Type Categories
 
 ---
 
-## 🧪 New Business Problem: Translate to Data 
+## 📌 New Business Problem: Translate to Data 
 1. Identifying deliverable metrics for Solution
 
 Business Problem: Call Center Representatives have reported to management they cannot always receive contact information such as email or phone numbers when they process Service-Request calls in Washington D.C. due to the fast paced nature of calls. 
