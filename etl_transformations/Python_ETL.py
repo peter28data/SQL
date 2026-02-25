@@ -2,7 +2,6 @@
 
 # ETL Transformations in Python allow for reuseable code at scale to prepare data for missing values.
 
-
 # ---------Cleaning Data--------------
 
 # Identify  Duplicate rows
