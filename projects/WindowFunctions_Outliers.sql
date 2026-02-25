@@ -1,3 +1,4 @@
+-------------------------------------------------------------------------------------
 /*
 Implement a methodical approach known as Statistical Process Control (SPC).
 This approach uses statistics to determine the quality of a process. Processes are adjusted when outside of 3 standard deviations. 
