@@ -39,6 +39,7 @@ df = df[df['clicks']>=0]
 check_if_any_negatives = df[df['clicks']<0]
 check_if_any_negatives
 
+
 # ------------------------------------
 
 # Replace Missing Values At Scale
