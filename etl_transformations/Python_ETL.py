@@ -17,6 +17,7 @@ df.drop_duplicates(inplace=True)
 
 duplicate_rows = df[df.duplicated()]
 
+
 # ------------------------------------
 
 # Summary Statistics
