@@ -1,4 +1,4 @@
--- #1 Navigating Databases
+-- Navigating Databases
 -- To navigate hundreds of tables for the right columns of data an efficient way is to query the list of tables to return schema name, table name, and table owner such as Postgres.
 
 SELECT *
@@ -21,7 +21,7 @@ FROM table_columns
   
 ------------------------------------------------------------
 
--- Q6: Data Cleaning for Outliers
+-- Data Cleaning for Outliers
 -- This query identifies outliers by selecting salaries outside of 3 standard deviation from the average. 
 SELECT *
 FROM employee_info
@@ -117,7 +117,7 @@ TRIM(LOWER('Wow!'), 'w!') -- This will remove only lowercase but first lowercase
 
 --------------------------------------------------------------------------
 
--- #2 Query for Student Performance: Multi-Level Aggregating for Hours Studied
+-- Query for Student Performance: Multi-Level Aggregating for Hours Studied
   
 -- Group students by ranges of hours studied and calculate the average exam score for each group.
   
@@ -134,7 +134,7 @@ GROUP BY hours_studied_range           -- Groups by KPI (hours studied)
 ORDER BY avg_exam_score DESC; 
 
 
--- #3 Ranking Exam Scores Based on Extracurricular activities
+-- Ranking Exam Scores Based on Extracurricular activities
 
 SELECT
 attendance,
@@ -148,7 +148,7 @@ ORDER BY exam_rank ASC
 LIMIT 30;
 
 
--- #4 Who are our most Active Students?
+-- Who are The Most Active Students?
 --Calculate the average exam score of students who studied more than 10 hours and participated in extracurricular activities.
 
 SELECT
@@ -164,7 +164,7 @@ ORDER BY hours_studied DESC;
 
 --------------------------------------------------------------------------------------------------
 
--- Q5: Aggregating Salary Range
+-- Aggregating Salary Range
 -- Show employee names of people that have salaries less than the average.
 
 SELECT
