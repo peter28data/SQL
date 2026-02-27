@@ -18,7 +18,7 @@ The Goal: Transform inconsistent records into reliable, query-ready tables that 
 3. Aggregated by Noise-Type Categories
 
 
-## Business Problem 
+## Business Problem 1 of 2
 
 Open-source data from real Washington D.C. 311 Service-Request calls is often collected from multiple sources and contains inconsistent formatting, duplicate values, and non-standard category labels. 
 
@@ -57,25 +57,22 @@ These issues make it difficult for management to accurately compare sectors acro
 
 ![category Count](https://github.com/peter28data/SQL/blob/main/images/category_aggregated.png)
 
-----
-
-The final output enables stakeholders to clearly understand which request categories are most common in each street and where operational resources may be required.
-
-A visual can now be generated to count the number of Service-Request calls in each category.
-
 ---
 
-## 📊 Chat-GPT Graph vs Senior Analyst
-The initial graph below is the result of using Chat-GPT to produce a visual for Noise-Related Service-Request categories. 
+## 🧩 Junior Analyst vs Senior Analyst
 
-The second graph are the changes produced by prompt engineering at a senior analyst level. 
+The final output enables stakeholders to clearly understand which request categories are most common in each street and where operational resources may be reallocated. A visual can now be generated to count the number of Service-Request calls in each category.
+
+1. The initial graph below is the result of using Chat-GPT to produce a visual for Noise-Related Service-Request categories. 
+
+2. The second graph are the changes produced by prompt engineering at a senior analyst level. 
 
 ---
 ![city response](https://github.com/peter28data/SQL/blob/d828cb9eeacb768d5d4bae8303bfc66c1c8243f8/images/city_noise_responses_categories10.6.png)
 
 ---
 
-## 🧩 Changes Made: Chat-GPT Graph vs Senior Analyst
+## 🧩 Changes Made: Junior Analyst vs Senior Analyst
 1. Red-dash marker for average across all categories 
 
 2. Integrated shaded coloring with Count of Categories
@@ -88,15 +85,15 @@ The second graph are the changes produced by prompt engineering at a senior anal
 
 ---
 
-## Recap: SQL Queries to Clean Data
+## Recap: SQL Queries Results
 1. Trimmed Data to remove numbers from street names
 2. Split Strings to remove 'St, Ave, Ln'
 3. Aggregated by Noise-Type Categories
 
 ---
 
-## 📌 New Business Problem: Translate to Data 
-1. Identifying deliverable metrics for Solution
+## 📌 Business Problem 2 of 2
+1. Identifying Deliverable Metrics for Solution
 
 Business Problem: Call Center Representatives have reported to management they cannot always receive contact information such as email or phone numbers when they process Service-Request calls in Washington D.C. due to the fast paced nature of calls. 
 
