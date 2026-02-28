@@ -17,6 +17,23 @@ The Goal: Transform inconsistent records into reliable, query-ready tables that 
 2. Split Strings to remove 'St, Ave, Ln'
 3. Aggregated by Noise-Type Categories
 
+---
+
+## 🧩Missing Values Management ##
+1. CASE WHEN Function: Utilized above to handle complex for one feature such as changing another feature in dataset if the other is before a timeline of 2021.
+
+
+2. COALESCE Function: Utilized below for less tasks such as removing unwanted characters, changing data type, and lower casing but for four features instead of one.
+
+---
+
+![case replace](https://github.com/peter28data/SQL/blob/main/images/case_when_missing.png)
+
+---
+
+![coalesce](https://github.com/peter28data/SQL/blob/main/images/coalesce_columns.png)
+
+---
 
 ## Business Problem 1 of 2
 
@@ -141,21 +158,6 @@ SPLIT_PART Function: The category labels such as "Snow Removal-Tree Obstruction"
 
 ----
 
-## 🧩Missing Values Management ##
-1. CASE WHEN Function: Utilized above to handle complex for one feature such as changing another feature in dataset if the other is before a timeline of 2021.
-
-
-2. COALESCE Function: Utilized below for less tasks such as removing unwanted characters, changing data type, and lower casing but for four features instead of one.
-
----
-
-![case replace](https://github.com/peter28data/SQL/blob/main/images/case_when_missing.png)
-
----
-
-![coalesce](https://github.com/peter28data/SQL/blob/main/images/coalesce_columns.png)
-
----
 ## 🤝 Done!  Thank you for Reading
 For Project in Tableau, click below:
 
