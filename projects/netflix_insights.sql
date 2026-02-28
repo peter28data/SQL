@@ -1,5 +1,5 @@
 -------------------------------------------------------------------------------------------------
--- Q1: Identify VIP users for Netflix 
+-- Q1 of 14: Identify VIP users for Netflix 
 -- They are defined as the most active in terms of the number of hours of content they watch. Write a SQL query that will retrieve the top 10 users with the most watched hours in the last month.
   
 SELECT
