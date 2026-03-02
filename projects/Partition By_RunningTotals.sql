@@ -16,19 +16,6 @@ ON c.id = m.country_id
 
 ---------------------------------------------------------------------------------------------
 
--- Sliding Windows
--- Perform calculations relative to the Current Row
-
-PRECEDING           -- Specify number of rows before input
-FOLLOWING           -- Specify number of rows after input
-  
-UNBOUNDED PRECEDING -- Every row since the beginning
-UNBOUNDED FOLLOWING -- Every row to the end
-
-CURRENT ROW         -- Stops the calculation at the Current Row
-  
----------------------------------------------------------------------------------------------
-
 -- Running Total from oldest to Most recent
 -- Calculates the sum of goals when Manchester city played as the home team during the 2011/2012 season
 
@@ -110,6 +97,20 @@ away AS (
 
 -- Organize the queries together starting with the CTEs followed by the selecting query, then the Joins, ending with the filtering.
 
+  
 -------------------------------------------
+
+-- Sliding Windows
+-- Perform calculations relative to the Current Row
+
+PRECEDING           -- Specify number of rows before input
+FOLLOWING           -- Specify number of rows after input
+  
+UNBOUNDED PRECEDING -- Every row since the beginning
+UNBOUNDED FOLLOWING -- Every row to the end
+
+CURRENT ROW         -- Stops the calculation at the Current Row
+  
+---------------------------------------------------------------------------------------------
 
 -- Created on 8.9.2025
