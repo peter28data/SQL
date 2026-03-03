@@ -1,3 +1,5 @@
+----------------------------------------------------------
+
 -- Navigating Databases
 -- To navigate hundreds of tables for the right columns of data an efficient way is to query the list of tables to return schema name, table name, and table owner such as Postgres.
 
