@@ -162,7 +162,7 @@ SPLIT_PART Function: The category labels such as "Snow Removal-Tree Obstruction"
 ## 🤝 Done!  Thank you for Reading
 For Project in Tableau, click below:
 
-🔗 Tableau Portfolio Link: https://github.com/peter28data/github
+🔗 Tableau Portfolio Link: https://github.com/peter28data/Tableau
 
 🔗 Python Portfolio Link: https://github.com/peter28data/Python
 
