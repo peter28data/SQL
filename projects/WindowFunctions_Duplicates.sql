@@ -18,7 +18,7 @@ FROM product_inventory_table
 
 -- Use Above as Subquery in FROM clause
   
--- Now to remove the duplicates, we use the WHERE clause to select only row numbers that are 1.
+-- To remove the duplicates, the WHERE clause is used to select row numbers that are 1.
 
 -- By putting the query above in the subquery in the FROM clause we can filter out duplictes with the Window Function ROW_NUMBER() that is beyond 1.
 
