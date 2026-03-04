@@ -42,7 +42,6 @@ Open-source data from real Washington D.C. 311 Service-Request calls is often co
 
 These issues make it difficult for management to accurately compare sectors across service request categories. The messy data will be cleaned in three steps and create a visual.
 
-
 ---
 
 ![noise related](https://github.com/peter28data/SQL/blob/d828cb9eeacb768d5d4bae8303bfc66c1c8243f8/images/noise_related_requests_category74.png)
