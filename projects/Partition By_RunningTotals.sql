@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------------------
 
--- Window Function: OVER(PARTITION BY x, y)
+-- Window Function: Average Over Country Every Season
 --Explanation: selecting country name with a window function, this query will return the season avg, per year, for each country name. 
 
 SELECT
