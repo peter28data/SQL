@@ -89,7 +89,7 @@ The final output enables stakeholders to clearly understand which request catego
 
 ---
 
-## 🧩 Changes Made: Junior Analyst vs Senior Analyst
+## 🧩 Improvements Made: 
 1. Red-dash marker for average across all categories 
 
 2. Integrated shaded coloring with Count of Categories
