@@ -89,7 +89,7 @@ The final output enables stakeholders to clearly understand which request catego
 
 ---
 
-## 🧩 Improvements Made: 
+### 🧩 Improvements Made: 
 1. Red-dash marker for average across all categories 
 
 2. Integrated shaded coloring with Count of Categories
