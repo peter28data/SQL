@@ -1,4 +1,5 @@
 --------------------Step 1: Identify the Leak -----------------
+
 -- 1.1 Identify the Data Leak
 
 -- Check if th3ere are any rows or entire columns with no data.
@@ -19,8 +20,6 @@ GROUP BY age;
 SELECT *
 FROM your_table
 WHERE gender NOT IN ('Male', 'Female');
-
-
 
 
 -- 1.4 Check for Uniformity
@@ -62,10 +61,7 @@ SET temperature = (
 WHERE temperature IS NULL;
 
 
-
---------------------------------------------------------------------------
-
--- Outliers
+--------------------- Step 3: Outliers --------------------------------------------------
 
 -- Use Case: We detect grocery shoppers spending $0.05 annually which is unusually low and may affect the majority of the data when calculated averages.
 
@@ -102,7 +98,6 @@ FROM (
 
 --------------------------------------------------------------------------
 
-
 -- Contaminated Data
 -- Refers to the inclusion of incorrect, irrelevant, or outdated information that can distort results, leading to misleaing insights. 
 
@@ -120,15 +115,4 @@ FROM (
 SELECT DISTINCT *
 FROM your_table
 
-
 --------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
