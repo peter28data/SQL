@@ -377,10 +377,10 @@ ORDER BY eatery ASC;
 
 ------------------------------------- Recap------------------------------------------------
 /* 
-Ch.1 Revenue, Cost, Proft
-ch.2 User-Center Metrics
-Ch.3 Unit economics and Frequency Table
-Ch.4 Executive Report Functions for Readability
+Task 1 Revenue, Cost, Proft
+Task 2 User-Center Metrics
+Task 3 Unit economics and Frequency Table
+Task 4 Executive Report Functions for Readability
 
 
 
