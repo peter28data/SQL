@@ -71,7 +71,7 @@ JOIN cost ON revenue.meal_id = cost.meal_id
 ORDER BY proft DESC
 LIMIT 3;
 
----------Ch.2: User Centric KPIs-------------------------------------------
+--------- Task 2: User Centric KPIs -------------------------------------------
 -- Registration Date is the minimum order date because it is when the user first made a purchase
 
 SELECT
@@ -183,7 +183,7 @@ ORDER BY previous.delivr_month ASC;
 
 
 
-------------------------------------Ch.3: ARPU, Histograms, Percentiles ---------------------------
+------------------------------------ Task 3: ARPU, Histograms, Percentiles ---------------------------
 /* Unit Economics: Measures performance per unit, as opposed to overall performance
 Example: Average Revenue Per User (ARPU): Overall revenue / Count of users
 The Unit Economic ARPU measures a company's success in scaling its business model and can be useful to secure financial loans based on future projections at the current Unit Economics and other growth rates. The first query will be useful to track over time because it can be easily grouped by month. The second way is useful to see the distribution of revenue per users for a histogram. */
@@ -285,7 +285,7 @@ ROUND(AVG(orders) :: NUMERIC, 2) AS avg_orders
 FROM user_orders;
 
 
-----------------------------Ch.4: Generating an Executive Report---------------------------------
+---------------------------- Task 4: Generating an Executive Report ---------------------------------
 /* Survey of Useful Functions
 From DATE_TRUNC() to TO_CHAR(): This will return a readable date format such as 'Friday 13, 2018'
 */
