@@ -1,63 +1,3 @@
----------------------------------------------------------------------------------------------
-
--- Display all artists and the first genre listed in the 'genre' column if the 'genre' column contains an array with multiple values
-  
-SELECT
-  SPLIT_PART(genre,',',1) AS main_genre  -- Wrong version
-  genre[1] AS main_genre                 -- Correct version
-
-
--- Return month from the timestamp '2005-01-24'
-  
-SELECT
-EXTRACT(month FROM timestamp '2005-01-24') AS month
-
-  
-----------------------------------------------------------------------------------------------
-  
-  
--- Determine the highest count of wine bottles for Vineyard LLC amongst all category types with a CTE
-  
-WITH type_count as (
-  SELECT type, count(id) as bottle_count
-  from wine
-  group by type)
-select MAX(bottle_count)
-from type_count    
-
--- Using the 'accounts' table create a new column code_part that contains an extract of the 'code' column starting at position 3 with a total length of 4 characters
-  
-SELECT
-  SUBSTR(code FROM 3 FOR 4) AS code_part  -- Wrong
-  substring(code, 3, 4) AS code_part      -- Correct
-
-
---9 for each order id, calculate the total quantity of all products in the order. 
-SELECT
-  id,
-  product,
-  quantity,
-  SUM(quantity) OVER(PARTITION BY id) AS total
-FROM orders
-ORDER BY id, product
-LIMIT 5;
-
-
---10 average number of employees
-SELECT AVG(count_employees)
-FROM (
-  SELECT manager_id,
-  count(employee_id) AS count_employees
-  FROM employees
-  GROUP BY manager_id) AS employee_summary    -- returns avg
-
-
---12 Cast 2 weeks as a Time interval
-SELECT CAST('2 weeks' AS INTERVAL); -- wrong ->INTERVAL 2 WEEK AS interval_value;    -- Returns 14 days 0:00:00
--- This statement converts the string '2 weeks' into an INTERVAL type. 
-
-
-
 ----------------------------------------------------------------------------------------------------
 
 --14 Use a CTE to aggregate the date from current date to have a column for days overdue
@@ -110,6 +50,66 @@ LIMIT 7;
 -- Explanation: In this case, the left function returns the first character of the string because the argument is 1, however, since it is used with the IN() function it creates a filter to return values if the first character of the string in the column 'name' is a vowel letter specified in the list. 
 
 
+---------------------------------------------------------------------------------------------
+
+-- Display all artists and the first genre listed in the 'genre' column if the 'genre' column contains an array with multiple values
+  
+SELECT
+  SPLIT_PART(genre,',',1) AS main_genre  -- Wrong version
+  genre[1] AS main_genre                 -- Correct version
+
+
+-- Return month from the timestamp '2005-01-24'
+  
+SELECT
+EXTRACT(month FROM timestamp '2005-01-24') AS month
+
+  
+----------------------------------------------------------------------------------------------
+  
+  
+-- Determine the highest count of wine bottles for Vineyard LLC amongst all category types with a CTE
+  
+WITH type_count as (
+  SELECT type, count(id) as bottle_count
+  from wine
+  group by type)
+select MAX(bottle_count)
+from type_count    
+
+-- Using the 'accounts' table create a new column code_part that contains an extract of the 'code' column starting at position 3 with a total length of 4 characters
+  
+SELECT
+  SUBSTR(code FROM 3 FOR 4) AS code_part  -- Wrong
+  substring(code, 3, 4) AS code_part      -- Correct
+
+
+-- for each order id, calculate the total quantity of all products in the order. 
+SELECT
+  id,
+  product,
+  quantity,
+  SUM(quantity) OVER(PARTITION BY id) AS total
+FROM orders
+ORDER BY id, product
+LIMIT 5;
+
+
+-- average number of employees
+SELECT AVG(count_employees)
+FROM (
+  SELECT manager_id,
+  count(employee_id) AS count_employees
+  FROM employees
+  GROUP BY manager_id) AS employee_summary    -- returns avg
+
+
+-- Cast 2 weeks as a Time interval
+SELECT CAST('2 weeks' AS INTERVAL); -- wrong ->INTERVAL 2 WEEK AS interval_value;    -- Returns 14 days 0:00:00
+-- This statement converts the string '2 weeks' into an INTERVAL type. 
+
+
+
 --5 Display the previous order's quantity
 LAG(quantity, 1) OVER() AS pre_quantity
 
@@ -123,9 +123,6 @@ FROM food
 ORDER BY energy, protein;
 
 -- Explanation: Capitalizes the first letter of each word and converts the rest of the letters to lowercase.
-
-
-
 
 
 --------------------------------------------------------------------------
@@ -143,9 +140,6 @@ ORDER BY price, style
 LIMIT 5;
 
 
-
-
-
 --------------------------------------------------------------------------
 
 --15 The purpose of using a subquery in the select clause is to return the average of two values from different tables in the same row. 
@@ -155,17 +149,12 @@ AVG(energy) AS avg_energy                   -- energy is from 'food' table
 FROM food  
 
 
-
-
-  
 -- Same Results
 SELECT item, energy AS calories,
 (AVG(energy) OVER() )::int AS avg_calories
 FROM food
 ORDER BY calories DESC, item
 LIMIT 5
-
-
 
 
 --------------------------------------------------------------------------
@@ -178,4 +167,3 @@ SUM(quantity_ordered
 --------------------------------------------------------------------------
 
 -- Created on 8.6.2025
-
