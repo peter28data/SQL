@@ -80,7 +80,7 @@ These issues make it difficult for management to accurately compare sectors acro
 
 The final output enables stakeholders to clearly understand which request categories are most common in each street and where operational resources may be reallocated. A visual can now be generated to count the number of Service-Request calls in each category.
 
-1. The initial graph below is the result of using Chat-GPT to produce a visual for Noise-Related Service-Request categories. 
+1. The initial graph below is the result of using AI (Chat-GPT) to produce a visual for Noise-Related Service-Request categories. 
 
 2. The second graph are the changes produced by prompt engineering at a senior analyst level. 
 
