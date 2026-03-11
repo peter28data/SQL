@@ -27,13 +27,6 @@ FROM employees
 WHERE hire_date::TEXT !~ '^\d{4}-\d{2}-\d{2}$'
 
 
-
------------------------------------------------------------------
-
--- write a sql query to return the month part of the event_trime in letter format (October)
-
-
-
 -----------------------------------------------------------------
 
 --how would you identify customers that do not meet the specified regular expression pattern 'CDX[0-9]+'?
@@ -53,27 +46,13 @@ WHERE customer_code NOT IN ('CDX1','CDX2','CDX3');
 WHERE customer_code <> 'CDX1';
 
 
-
------------------------------------------------------------------
-
--- which of the following queries provide the dat types of each column in a table called cars, "select schema cars" "show types cars" "\d cars" or "\schema cars"
-
--- \d cars descrives the table strucure including columns and their data types
-
-
-
------------------------------------------------------------------
-
--- PART 2 DATA ENGINEER EXAM
-
-
-
 -----------------------------------------------------------------
 
 -- Check for Non-Integer Values
 -- The user_id column cannot have missing values so we must check for missing values and any duplicates
 
 -- If user_id is stored as a text or varchar, regular expression can be used to find non-integer entries
+
 SELECT user_id
 FROM user
 WHERE user_id !~ '^[0-9]+$'
@@ -93,8 +72,6 @@ SELECT *
 FROM users
 WHERE user_id IS NULL
 
-
-
   
 -----------------------------------------------------------------
 
@@ -103,7 +80,8 @@ WHERE user_id IS NULL
 -- Clean Categorical and Text Data by Manipulating Strings
   
 -- The following query is to update an exisiting table, however the second query cleans the data without modifying the table
-UPDATE users
+
+	UPDATE users
 SET age = (
   SELECT ROUND(AVG(age))
   FROM users
@@ -123,9 +101,6 @@ SELECT
 FROM users
 
 
-
-  
-  
 -- If you'll reuse this 'cleaned' version, creating a view 
 CREATE VIEW users_cleaned AS
 SELECT
