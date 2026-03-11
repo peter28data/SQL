@@ -25,7 +25,6 @@ LIMIT 3;
 
 
 
-
 -- for each vendor_name: ->combine the vendor_city and vendor_state
 SELECT
 vendor_name,
@@ -33,7 +32,6 @@ vendor_name,
 CONCAT(vendor_city,', ', vendor_state) AS location
 FROM vendors
 LIMIT 3;
-
 
 
 
@@ -54,7 +52,8 @@ MAX(price) - MIN(price) AS difference
 ---------------------------------------------------------------
   
 -- bike_stations contains newly built bike locations. bike_trips contains bike trips on new locations or previously existing ones. return each bike trip only started in newly built bike stations.
-SELECT
+
+  SELECT
 trip_id,
 station_id,
 latitude,
@@ -74,12 +73,12 @@ SELECT
   FULL JOIN bike as b
   on t.bike_id = b.bike_id
 
-  
 
 --------------------------------------------------------------------------------------------
 
 -- return number of duplicates records
-SELECT
+
+  SELECT
 name,
 city,
 state,
@@ -189,7 +188,6 @@ FROM movie_budget;
 
 
 ---------------------------------------------------------------------------
-
 
 -- The movie with the longest title
 SELECT year, title, budget,
