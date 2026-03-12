@@ -85,6 +85,7 @@ The final output enables stakeholders to clearly understand which request catego
 2. The second graph are the changes produced by prompt engineering at a senior analyst level. 
 
 ---
+
 ![city response](https://github.com/peter28data/SQL/blob/d828cb9eeacb768d5d4bae8303bfc66c1c8243f8/images/city_noise_responses_categories10.6.png)
 
 ---
