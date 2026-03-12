@@ -62,6 +62,7 @@ HAVING COUNT(*) > 5;       -- More than 5 documentary movies
 
 
 -------------------------------------------------------------------------------------------------
+
 -- Q5: Explain the difference between GROUP BY and HAVING.
 -- Use GROUP BY to group data and HAVING to filter aggreagated results 
 
@@ -74,7 +75,8 @@ HAVING COUNT(*) > 5         -- Filters groups with more than 5 counts of employe
 
 -- Q6: Explain the difference between INNER JOIN and OUTER JOIN.
 -- INNER JOIN returns only matching records from Both tables whereas OUTER JOIN returns all records from both tables, matches where possible, and includes NULL values
-SELECT
+
+  SELECT
 e.name,
 d.department_name
 FROM employees AS e
@@ -114,6 +116,7 @@ WHERE rank_num <=3;
 
 -- Q10: What is the difference between UNION and UNION ALL?
 -- UNION removes duplicates when you want distinct rows and UNION ALL performs faster at scale because it keeps all rows including duplicates.
+
 SELECT
 city
 FROM customers
@@ -124,7 +127,8 @@ FROM vendors
 
 
 -- Q11: How do you use CASE statement in SQL?
-SELECT 
+
+  SELECT 
 name,
 salary,
 CASE
@@ -135,8 +139,8 @@ END AS salary_category
 FROM employees
 
 
-
 -- Q12: Calculate the cumulative sum of sales.
+
 SELECT
 order_date,
 product_id, 
@@ -148,6 +152,7 @@ FROM sales;
 
 -- Q13: What is a CTE (Common Table Expression), and how is it used?
 -- A temporary result set that you can reference in a SQL query. It improves readability and simplifies complex queries to avoid repeating subqueries. 
+
 WITH high_earners AS (
   SELECT
   emp_id,
@@ -158,6 +163,7 @@ WITH high_earners AS (
 SELECT *
 FROM high_earners
 
+  
 --------------------------------------------------------------------------
 
 -- Window Functions
@@ -190,9 +196,5 @@ IN() NOT IN()
 WHERE EXISTS()
 LIKE  /  NOT LIKE  /  ILIKE
 BETWEEN  /  NOT BETWEEN
-
-
-
-
 
 
