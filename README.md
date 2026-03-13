@@ -19,7 +19,7 @@ The Goal: Transform inconsistent records into reliable, query-ready tables that 
 
 ---
 
-## 🧩Missing Values Management ##
+## Missing Values Management ##
 1. CASE WHEN Function: Utilized above to handle complex for one feature such as changing another feature in dataset if the other is before a timeline of 2021.
 
 
