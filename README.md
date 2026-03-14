@@ -103,7 +103,7 @@ The final output enables stakeholders to clearly understand which request catego
 
 ---
 
-## Recap: SQL Queries Results
+## Recap: Queries Results
 1. Trimmed Data to remove numbers from street names
 2. Split Strings to remove 'St, Ave, Ln'
 3. Aggregated by Noise-Type Categories
