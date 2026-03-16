@@ -13,6 +13,7 @@ This project demonstrates database management using SQL to clean, standardize, a
 
 The Goal: Transform inconsistent records into reliable, query-ready tables that support accurate reporting and decision-making through the following steps below.
 
+
 1. Trimmed Data to remove numbers from street names
 2. Split Strings to remove 'St, Ave, Ln'
 3. Aggregated by Noise-Type Categories
