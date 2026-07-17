@@ -4,20 +4,10 @@
 
 ----
 
-# 📌 End-to-End SQL Analytics Project
-## Database Management Portfolio 
-
-## Executive Summary
+# 📌 End-to-End SQL Development Project
+### Database Management Portfolio 
 
 This project demonstrates database management using SQL to clean, standardize, and analyze city service request data. 
-
-The Goal: Transform inconsistent records into reliable, query-ready tables that support accurate reporting and decision-making through the following steps below.
-
-
-1. Trimmed Data to remove numbers from street names
-2. Split Strings to remove 'St, Ave, Ln'
-3. Aggregated by Noise-Type Categories
-
 
 
 
@@ -262,6 +252,14 @@ These issues make it difficult for management to accurately compare sectors acro
 
 ----
 
+### Action Items:
+
+1. Trimmed Data to remove numbers from street names
+2. Split Strings to remove 'St, Ave, Ln'
+3. Aggregated by Noise-Type Categories
+
+Transformed inconsistent records into reliable, query-ready tables that support accurate reporting and decision-making through the following steps below.
+
 1️⃣ First, the code below:
 - **Standardize the Data** by removing all unwanted characters from street names such as numbers
 
@@ -380,8 +378,7 @@ For Project in Tableau, click below:
 
 🔗 Python Portfolio Link: https://github.com/peter28data/Python
 
-
-🔗 Current Portfolio Link: https://github.com/peter28data/SQL
+🔗 Data Modeling Link: https://github.com/peter28data/data-modeling
 
 
 ---
