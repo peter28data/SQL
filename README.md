@@ -227,7 +227,7 @@ This project demonstrates Database Management using SQL to Clean, Standardize, a
 ---
 
 ## Missing Values Management ##
-1. CASE WHEN Function: Utilized above to handle complex for one feature such as changing another feature in dataset if the other is before a timeline of 2021.
+1. CASE WHEN Function: Utilized to change another feature in dataset if primary feature is before a timeline of 2021.
 
 
 2. COALESCE Function: Utilized below for less tasks such as removing unwanted characters, changing data type, and lower casing but for four features instead of one.
