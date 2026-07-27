@@ -1,6 +1,8 @@
 -----------------------------------------------------------------------
 
--- return rows where the title contains 'k' or 'm' only in lowercase
+-- Regex Tradeoffs 
+-- Returns Rows where the Title contains 'k' or 'm' only in lowercase
+
 WHERE title SIMILAR TO '%(k|m)%';    -- LIKE can be used for lowercase specific character
 
 -- the LIKE operator does not support Regular expressions or pattern alternation using Parentheses and the pipe symbol ( (k|m) ).
