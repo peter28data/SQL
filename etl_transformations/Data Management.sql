@@ -239,18 +239,7 @@ group by station, starts
 limit 3;
 
 
-
---------------------------------------------------------------------------
-
--- Which of the questions require the Joining of two separate tables, one with station ID and locations, the other with starting station IDs and start times.
-
--- What Time of Day most users starts biking?
--- How many bike trips has started at station 3045?
--- Where is the bike station each trip has started? --> Correct
--- Where are the bike stations available in the city?
-
-
---------------------------------------------------------------------------
+---------------------------------
 
 -- Return the Rows that only appears in the movie_2000, But Not movie_2010
 SELECT *
@@ -258,7 +247,7 @@ FROM movie_2000
 EXCEPT
   
 SELECT *
-FROM movei_2010
+FROM movie_2010
 ORDER BY year;
 
 -- Explanation: The advantage of using EXCEPT is that it removes duplicates by default and returns rows in the first query but not in the second query whereas LEFT JOIN combines rows.  
