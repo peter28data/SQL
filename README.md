@@ -1,7 +1,6 @@
 <h1 align="center">Peter Garay-Robles </h1>
 
 
-----
 
 # 📌 End-to-End SQL Development Project
 ### Database Administration & Management Portfolio 
