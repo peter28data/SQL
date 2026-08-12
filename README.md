@@ -1,6 +1,5 @@
 <h1 align="center">Peter Garay-Robles </h1>
 
-<h3 align="center">A Senior Analyst in Power BI and SQL. </h3>
 
 ----
 
