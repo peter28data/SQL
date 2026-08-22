@@ -3,8 +3,9 @@
 
 
 
-# 📌 End-to-End SQL Development Project
-### Database Administration & Management Portfolio 
+
+# Database Administration & Management Portfolio 
+### End-to-End SQL Development Project
 
 This project demonstrates Database Management using SQL to Clean, Standardize, and Analyze city service request data. 
 
