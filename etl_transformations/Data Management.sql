@@ -1,22 +1,51 @@
 -----------------------------------------------------------------------
 
--- Regex Tradeoffs 
--- Returns Rows where the Title contains 'k' or 'm' only in lowercase
+-- "bike_stations" contains newly built bike locations. 
+-- "bike_trips" contains bike logs from new locations and previously existing ones
+-- Identify which bike trips only began in newly built bike stations.
 
-WHERE title SIMILAR TO '%(k|m)%';    -- LIKE can be used for lowercase specific character
+  SELECT
+trip_id,
+station_id,
+latitude,
+longitude
+FROM bike_trips as t
+INNER JOIN bike_stations AS s   
+on t.stating_station = s.station_id;
 
--- the LIKE operator does not support Regular expressions or pattern alternation using Parentheses and the pipe symbol ( (k|m) ).
+-- Summary: A left join will return NULL for columns where there is no match with the right side, therefore, an inner join is optimal to return only matched records. 
+
+--------------------------------------------------------------------
+
+-- Join table but keep all the records no mater whether they a match
+SELECT
+  trip_id,
+  duration,
+  bike_id
+  FROM bike_trips as t
+  FULL JOIN bike as b
+  on t.bike_id = b.bike_id
 
 
+--------------------------------------------------------------------------------------------
+-- Regular Expression (Regex) String Pattern Matching Tradeoffs 
 
--- the title does Not only contain word characters(letters, numbers or underscores)
+-- Returns Rows where the movie Title contains 'k' or 'm' only in lowercase
+
+WHERE title SIMILAR TO '%(k|m)%';    
+
+-- The SIMILAR TO Operator has the advantage of the Parentheses and the pipe symbol (k|m) over the LIKE Operator.
+-- LIKE can be used for lowercase specific character
+------------------------------------------------------------------------
+
+-- Utilize to flag unusual movie titles that contain something OTHER THAN word characters
 WHERE title NOT SIMILAR TO '\w*';
 
 
+-- Utilizing Underscores
+-- 4 Underscores will return the movie titles which only includes four letters for abbreviated columns
 
--- return the movie titles which only includes four letters
--- Wrong--WHERE title LIKE length(title) =4;
-WHERE title LIKE '____';    -- 4 underscores indicate 4 characters
+WHERE title LIKE '____';   
 
 --------------------------------------------------------------------
 
@@ -34,49 +63,24 @@ vendor_name,
 CONCAT(vendor_city,', ', vendor_state) AS location
 FROM vendors
 LIMIT 3;
+-------------------------------------------------------------------------
 
+-- Identify how many "speaker" products contain a higher than average price
 
-
--- return the number of rows that the speaker's price is higher than the average price from the speaker table.
 SELECT
 COUNT(*) AS above_avg
 FROM speaker
-WHERE price > (SELECT AVG(price) FROM speaker);  -- Wrong -> Aggregate functions cannot be used in the where clause because it is executed before aggregation happens. WHERE price > AVG(price);
+WHERE price > (SELECT AVG(price) FROM speaker);  
 
+-------------------------------------------------------------------------
 
-
--- Return the difference between each month's highest and lowest price.
+-- Calcute the Price Range between each month's highest and lowest price
 SELECT
 EXTRACT(month FROM date::DATE) AS month,
 MAX(price) - MIN(price) AS difference
 
 
 ---------------------------------------------------------------
-  
--- bike_stations contains newly built bike locations. bike_trips contains bike trips on new locations or previously existing ones. return each bike trip only started in newly built bike stations.
-
-  SELECT
-trip_id,
-station_id,
-latitude,
-longitude
-FROM bike_trips as t
-INNER JOIN bike_stations AS s    -- Wrong ->left join bike_stationsl as s
-on t.stating_station = s.station_id;
--- The explanation is because a left join will return NULL for columns where there is no match with the right side. An inner join will return only matched records. 
-
-
--- Join table but keep all the records no mater whether they a match
-SELECT
-  trip_id,
-  duration,
-  bike_id
-  FROM bike_trips as t
-  FULL JOIN bike as b
-  on t.bike_id = b.bike_id
-
-
---------------------------------------------------------------------------------------------
 
 -- return number of duplicates records
 
