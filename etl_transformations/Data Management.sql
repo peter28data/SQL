@@ -1,17 +1,40 @@
 -----------------------------------------------------------------------
+-- CTE & Joins
+
+WITH s AS (
+  SELECT
+  start_station,
+  COUNT(start_date) AS starts
+  FROM trip
+  GROUP BY start_station)
+SELECT
+  t.end_station AS station,
+  COUNT(t.end_date) AS ends,
+  s.starts
+FROM trip AS t
+INNER JOIN s
+  ON t.end_station = s.start_station
+GROUP BY station, starts
+LIMIT 7;
+
+-- Explanation: Utlize a CTE to store the name of the bike station and the total amount of rides that were started from each bike station. 
+
+-- Then, Utilize an INNER JOIN to find the transactions that appear from the CTE and the original "trip" table.
+
+---------------------------------
 
 -- "bike_stations" contains newly built bike locations. 
 -- "bike_trips" contains bike logs from new locations and previously existing ones
 -- Identify which bike trips only began in newly built bike stations.
 
-  SELECT
+SELECT
 trip_id,
 station_id,
 latitude,
 longitude
-FROM bike_trips as t
+FROM bike_trips AS t
 INNER JOIN bike_stations AS s   
-on t.stating_station = s.station_id;
+ON t.stating_station = s.station_id;
 
 -- Summary: A left join will return NULL for columns where there is no match with the right side, therefore, an inner join is optimal to return only matched records. 
 
@@ -211,39 +234,20 @@ WHERE installation_date NOT BETWEEN '2013-01-01' AND '2013-12-31';
 
 
 -------------------------------------
-
-SELECT 
-start_station,
-subscription_type,
-count(start_date) as trips,
-(select count(start_date)
-  from trip as t1
-  where t.start_station = t1.start_station) as station_total
-from trip as t
-group by start_station, subscription_type
-order by start_station
-limit 3;
-
-
-
-with s as (
-  select
+SELECT
   start_station,
-  count(start_date) as starts
-  from trip 
-  group by start_station)
-select
-t.end_station as station,
-count(t.end_datae) as ends,
-s.starts
-from trip as t
-inner join s
- on t.end_station = s.start_station
-group by station, starts
-limit 3;
+  subscription_type,
+  COUNT(start_date) AS trips,
+  (SELECT COUNT(start_date) FROM trip AS t1 WHERE t.start_station = t1.start_station) AS station_total
+FROM trip AS t1
+GROUP BY start_station, subscription_type
+ORDER BY start_station
+LIMIT 3;
+  
+-- Explanation: We are using a subquery in the SELECT Clause to return the number of stations that are newly build and added to the "trip" table.
 
+--------------------------------------
 
----------------------------------
 
 -- Return the Rows that only appears in the movie_2000, But Not movie_2010
 SELECT *
