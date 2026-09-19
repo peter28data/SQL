@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------
 
--- Top 5 Products by Category in Ascending order
+-- Subquery, Window Function, INNER JOIN, Top 5 Products by Category 
 
 SELECT * FROM (
 SELECT products.category, 
@@ -19,7 +19,7 @@ WHERE product_rank < 6;
 
 ---------------------------------------------------------------------------------------------
 
--- Calculate the Quantity for orders with Missing values
+-- CTE Missing values, RIGHT JOIN, INNER JOIN order quantity
 -- By determining the unit price
 
 WITH missing AS (
